@@ -1,7 +1,7 @@
 #ifndef  LOG_H_
 #define LOG_H_
 #include <memory>
-#include "../vendor/spdlog/include/spdlog/spdlog.h"
+#include <spdlog/spdlog.h>
 namespace dorframe{
   class Log{
   //private:

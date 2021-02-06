@@ -10,5 +10,6 @@ namespace dorframe{
     spdlog::set_pattern("%^[%T] %n: %v%$");
     s_Logger = spdlog::stdout_color_mt("dorframe");
     s_Logger->set_level(spdlog::level::trace);
+    DORFRAME_LOG_INFO("Initialzed Log.");
   }
 }

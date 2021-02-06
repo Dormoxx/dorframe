@@ -48,13 +48,12 @@ bool initialize(){
     }
   }
   isRunning = true;
-  DORFRAME_LOG_TRACE("Initialzed");
+  DORFRAME_LOG_TRACE("Initialzed Window");
   return isRunning;
 }
 
 int main(){
   dorframe::Log::Init();
-  DORFRAME_LOG_INFO("Initialzed Log.");
   if(initialize()){
     while(isRunning){
       while(SDL_PollEvent(&e) != 0){
