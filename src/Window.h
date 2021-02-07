@@ -2,6 +2,7 @@
 #define WINDOW_H_
 
 #include "helper/Vector2.h"
+#include <string>
 
 namespace dorframe{
   class Window{
@@ -15,8 +16,8 @@ namespace dorframe{
 
     //static Window* Create(const WindowProps& props = WindowProps());
   protected:
-    std::string m_Title = 0;
-    Vector2ui m_Dimensions = 0;
+    Vector2ui m_Dimensions = {0, 0};
+    bool m_isRunning = 0;
   };
 }
 #endif

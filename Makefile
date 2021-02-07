@@ -1,5 +1,5 @@
 #OBJS specifies which files to compile as part of the project
-OBJS = src/*.cpp
+OBJS = $(PWD)/src/*.cpp $(PWD)/src/platform/SDL/*.cpp
 
 #complier
 CC = g++
