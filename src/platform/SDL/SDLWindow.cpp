@@ -56,12 +56,17 @@ namespace dorframe{
     SDL_Quit();
   }
 
+  void SDLWindow::clear(){
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+  }
+
   void SDLWindow::onUpdate(){
     while(m_isRunning){
       while(SDL_PollEvent(&m_Event) != 0){
         if(m_Event.type == SDL_QUIT)
           m_isRunning = false;
       }
+      clear();
       SDL_GL_SwapWindow(m_Window);
     }
   }

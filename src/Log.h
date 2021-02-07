@@ -1,5 +1,7 @@
+#ifdef PLATFORM_SDL
 #ifndef  LOG_H_
 #define LOG_H_
+
 #include <memory>
 #include <spdlog/spdlog.h>
 namespace dorframe{
@@ -25,3 +27,4 @@ namespace dorframe{
 #define DORFRAME_LOG_FATAL(...) ::dorframe::Log::GetLogger()->fatal(__VA_ARGS__)
 
 #endif /* end of include guard: LOG_H_ */
+#endif

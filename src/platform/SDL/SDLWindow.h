@@ -14,6 +14,7 @@ namespace dorframe{
     SDLWindow(Vector2ui size, std::string title);
     virtual ~SDLWindow();
 
+    void clear();
     void onUpdate() override;
 
     inline unsigned int getWidth() const override {return m_Dimensions.x;}

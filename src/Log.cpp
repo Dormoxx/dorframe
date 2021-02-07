@@ -1,3 +1,4 @@
+#ifdef PLATFORM_SDL
 #include "Log.h"
 #include "../vendor/spdlog/include/spdlog/sinks/stdout_color_sinks.h"
 
@@ -13,3 +14,4 @@ namespace dorframe{
     DORFRAME_LOG_INFO("Initialzed Log.");
   }
 }
+#endif
