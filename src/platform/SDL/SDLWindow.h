@@ -8,25 +8,18 @@ namespace dorframe{
   class SDLWindow : public Window{
 
   public:
-    SDLWindow(const WindowProps& props);
+    SDLWindow(Vector2ui size, std::string title);
     virtual ~SDLWindow();
 
     void onUpdate() override;
 
-    inline unsigned int getWidth() const override {return m_Data.Width;}
-    inline unsigned int getHeight() const override {return m_Data.Height;}
+    inline unsigned int getWidth() const override {return m_Dimensions.x;}
+    inline unsigned int getHeight() const override {return m_Dimensions.y;}
 
   private:
     //window item
-    virtual void Init(const WindowProps& props);
+    virtual void Init(Vector2ui size, std::string title);
     virtual void Shutdown();
-
-    struct WindowData{
-      std::string Title;
-      unsigned int Width, Height;
-      bool VSync;
-    }
-    WindowData m_Data;
   };
 
 }
